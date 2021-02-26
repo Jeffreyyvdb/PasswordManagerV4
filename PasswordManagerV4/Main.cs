@@ -212,7 +212,7 @@ namespace PasswordManagerV3
         {
             MetroButton button = ((MetroButton)sender);
             //Edit buttons
-
+            
             int i = numberFromString(button.Name);
 
             // Bool goed op true of false zetten
@@ -240,6 +240,12 @@ namespace PasswordManagerV3
             }
             else
             {
+                //Save passwords if changes are canceled
+                string decrypted = Account.Decrypt(passwordList[i].password, loginPage.username + loginPage.masterPassword + passwordList[i].keySalt);
+                string oldEmail = passwordList[i].email;
+                string oldPassword = decrypted;
+
+                Console.WriteLine(oldPassword);
                 // niet meer editten
                 canEdit = !canEdit;
                 passwordTextBoxxenList[i].ReadOnly = true;
@@ -250,22 +256,30 @@ namespace PasswordManagerV3
 
                 button.BackColor = mainColor;
 
-                // if changes 
-                // if Are you sure to save == OK
+                if(confirmBox("SAVE CHANGES", "ARE YOU SURE YOU WANT TO SAVE THE CHANGES") == DialogResult.Yes)
+                {
+                    Console.WriteLine("Changes saven");
 
-                //Json to list
-                passwordList = Json.JsonToPasswordList(JSON_PATH_PASSWORD);
-                //Textbox text encrypten en dan aanpassen in Json
-                string encryptedPassword = Account.Encrypt(passwordTextBoxxenList[i].Text, loginPage.username + loginPage.masterPassword + passwordList[i].keySalt);
-                //Changes aanpassen in list
-                passwordList[i].email = emailTextBoxxenList[i].Text;
-                passwordList[i].password = encryptedPassword;
+                    //Json to list
+                    passwordList = Json.JsonToPasswordList(JSON_PATH_PASSWORD);
+                    //Textbox text encrypten en dan aanpassen in Json
+                    string encryptedPassword = Account.Encrypt(passwordTextBoxxenList[i].Text, loginPage.username + loginPage.masterPassword + passwordList[i].keySalt);
+                    //Changes aanpassen in list
+                    passwordList[i].email = emailTextBoxxenList[i].Text;
+                    passwordList[i].password = encryptedPassword;
 
-                //list schrijven naar json string
-                jsonPassword = Json.PasswordListToStringAsJson(passwordList);
+                    //list schrijven naar json string
+                    jsonPassword = Json.PasswordListToStringAsJson(passwordList);
 
-                //Jsonstring opslaan in file
-                File.WriteAllText(JSON_PATH_PASSWORD, jsonPassword);
+                    //Jsonstring opslaan in file
+                    File.WriteAllText(JSON_PATH_PASSWORD, jsonPassword);
+                }
+                else
+                {
+                    Console.WriteLine("SAVE CHANGES CANCELD");
+                    passwordTextBoxxenList[i].Text = oldPassword;
+                    emailTextBoxxenList[i].Text = oldEmail;
+                }
             }
         }
 
@@ -531,6 +545,7 @@ namespace PasswordManagerV3
                     emailTextBox.Name = "emailTextBox" + i;
                     emailTextBox.Location = location;
                     emailTextBox.Size = textBoxEmailSize;
+                    emailTextBox.Style = style;
                     emailTextBox.ReadOnly = true;
                     emailTextBox.UseCustomBackColor = true;
                     emailTextBox.BackColor = mainColor;
@@ -551,6 +566,7 @@ namespace PasswordManagerV3
                     passwordTextBox.Location = location;
                     passwordTextBox.Size = textBoxPasswordSize;
                     passwordTextBox.ReadOnly = true;
+                    passwordTextBox.Style = style;
                     passwordTextBox.UseSystemPasswordChar = true;
                     passwordTextBox.UseCustomBackColor = true;
                     passwordTextBox.BackColor = mainColor;

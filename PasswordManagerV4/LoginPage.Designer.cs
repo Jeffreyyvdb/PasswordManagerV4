@@ -171,7 +171,8 @@ namespace PasswordManagerV3
             this.metroTextBoxUsername.CustomButton.Visible = false;
             this.metroTextBoxUsername.DisplayIcon = true;
             this.metroTextBoxUsername.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.metroTextBoxUsername.Lines = new string[0];
+            this.metroTextBoxUsername.Lines = new string[] {
+        "Jeffrey"};
             this.metroTextBoxUsername.Location = new System.Drawing.Point(163, 68);
             this.metroTextBoxUsername.MaxLength = 32767;
             this.metroTextBoxUsername.Name = "metroTextBoxUsername";
@@ -185,6 +186,7 @@ namespace PasswordManagerV3
             this.metroTextBoxUsername.Size = new System.Drawing.Size(426, 30);
             this.metroTextBoxUsername.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTextBoxUsername.TabIndex = 12;
+            this.metroTextBoxUsername.Text = "Jeffrey";
             this.metroTextBoxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.metroTextBoxUsername.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTextBoxUsername.UseSelectable = true;
@@ -223,7 +225,8 @@ namespace PasswordManagerV3
             this.metroTextBoxPassword.CustomButton.Visible = false;
             this.metroTextBoxPassword.DisplayIcon = true;
             this.metroTextBoxPassword.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.metroTextBoxPassword.Lines = new string[0];
+            this.metroTextBoxPassword.Lines = new string[] {
+        "Jeffrey01!"};
             this.metroTextBoxPassword.Location = new System.Drawing.Point(163, 198);
             this.metroTextBoxPassword.MaxLength = 32767;
             this.metroTextBoxPassword.Name = "metroTextBoxPassword";
@@ -237,6 +240,7 @@ namespace PasswordManagerV3
             this.metroTextBoxPassword.Size = new System.Drawing.Size(426, 30);
             this.metroTextBoxPassword.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTextBoxPassword.TabIndex = 13;
+            this.metroTextBoxPassword.Text = "Jeffrey01!";
             this.metroTextBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.metroTextBoxPassword.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTextBoxPassword.UseSelectable = true;

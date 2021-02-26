@@ -59,6 +59,7 @@ namespace PasswordManagerV3
             this.metroTextBoxManagerWebsite = new MetroFramework.Controls.MetroTextBox();
             this.metroLabelManagerEmail = new MetroFramework.Controls.MetroLabel();
             this.metroLabelManagerWebsite = new MetroFramework.Controls.MetroLabel();
+            this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
             this.metroTabControl.SuspendLayout();
             this.metroTabPageGenerator.SuspendLayout();
@@ -81,9 +82,11 @@ namespace PasswordManagerV3
             this.metroTabControl.HotTrack = true;
             this.metroTabControl.Location = new System.Drawing.Point(20, 60);
             this.metroTabControl.Name = "metroTabControl";
-            this.metroTabControl.SelectedIndex = 0;
+            this.metroTabControl.SelectedIndex = 1;
             this.metroTabControl.Size = new System.Drawing.Size(984, 431);
+            this.metroTabControl.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl.TabIndex = 1;
+            this.metroTabControl.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabControl.UseSelectable = true;
             this.metroTabControl.SelectedIndexChanged += new System.EventHandler(this.metroTabControl_SelectedIndexChanged);
             // 
@@ -110,8 +113,10 @@ namespace PasswordManagerV3
             this.metroTabPageGenerator.Location = new System.Drawing.Point(4, 44);
             this.metroTabPageGenerator.Name = "metroTabPageGenerator";
             this.metroTabPageGenerator.Size = new System.Drawing.Size(976, 383);
+            this.metroTabPageGenerator.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabPageGenerator.TabIndex = 0;
             this.metroTabPageGenerator.Text = "Generator     ";
+            this.metroTabPageGenerator.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabPageGenerator.VerticalScrollbarBarColor = true;
             this.metroTabPageGenerator.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPageGenerator.VerticalScrollbarSize = 1;
@@ -125,8 +130,10 @@ namespace PasswordManagerV3
             this.metroTrackBarLength.Minimum = 6;
             this.metroTrackBarLength.Name = "metroTrackBarLength";
             this.metroTrackBarLength.Size = new System.Drawing.Size(328, 23);
+            this.metroTrackBarLength.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTrackBarLength.TabIndex = 12;
             this.metroTrackBarLength.Text = "Length";
+            this.metroTrackBarLength.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTrackBarLength.Value = 20;
             this.metroTrackBarLength.ValueChanged += new System.EventHandler(this.metroTrackBarLength_ValueChanged);
             // 
@@ -138,8 +145,10 @@ namespace PasswordManagerV3
             this.metroLabelWebsite.Location = new System.Drawing.Point(3, 274);
             this.metroLabelWebsite.Name = "metroLabelWebsite";
             this.metroLabelWebsite.Size = new System.Drawing.Size(76, 25);
+            this.metroLabelWebsite.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabelWebsite.TabIndex = 11;
             this.metroLabelWebsite.Text = "Website";
+            this.metroLabelWebsite.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabelPassword
             // 
@@ -149,8 +158,10 @@ namespace PasswordManagerV3
             this.metroLabelPassword.Location = new System.Drawing.Point(0, 346);
             this.metroLabelPassword.Name = "metroLabelPassword";
             this.metroLabelPassword.Size = new System.Drawing.Size(85, 25);
+            this.metroLabelPassword.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabelPassword.TabIndex = 11;
             this.metroLabelPassword.Text = "Password";
+            this.metroLabelPassword.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabelEmail
             // 
@@ -160,8 +171,10 @@ namespace PasswordManagerV3
             this.metroLabelEmail.Location = new System.Drawing.Point(3, 310);
             this.metroLabelEmail.Name = "metroLabelEmail";
             this.metroLabelEmail.Size = new System.Drawing.Size(63, 25);
+            this.metroLabelEmail.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabelEmail.TabIndex = 11;
             this.metroLabelEmail.Text = "E-Mail";
+            this.metroLabelEmail.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabelLength
             // 
@@ -172,8 +185,10 @@ namespace PasswordManagerV3
             this.metroLabelLength.Location = new System.Drawing.Point(577, 59);
             this.metroLabelLength.Name = "metroLabelLength";
             this.metroLabelLength.Size = new System.Drawing.Size(32, 25);
+            this.metroLabelLength.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabelLength.TabIndex = 11;
             this.metroLabelLength.Text = "20";
+            this.metroLabelLength.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroTileSave
             // 
@@ -182,9 +197,11 @@ namespace PasswordManagerV3
             this.metroTileSave.Location = new System.Drawing.Point(778, 274);
             this.metroTileSave.Name = "metroTileSave";
             this.metroTileSave.Size = new System.Drawing.Size(186, 102);
+            this.metroTileSave.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTileSave.TabIndex = 10;
             this.metroTileSave.Text = "Save";
             this.metroTileSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileSave.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTileSave.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.metroTileSave.UseSelectable = true;
             this.metroTileSave.Click += new System.EventHandler(this.metroTileSave_Click);
@@ -196,9 +213,11 @@ namespace PasswordManagerV3
             this.metroTileGenerate.Location = new System.Drawing.Point(586, 274);
             this.metroTileGenerate.Name = "metroTileGenerate";
             this.metroTileGenerate.Size = new System.Drawing.Size(186, 102);
+            this.metroTileGenerate.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTileGenerate.TabIndex = 10;
             this.metroTileGenerate.Text = "Generate";
             this.metroTileGenerate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileGenerate.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTileGenerate.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTileGenerate.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.metroTileGenerate.UseSelectable = true;
@@ -235,7 +254,9 @@ namespace PasswordManagerV3
             this.metroTextBoxPassword.SelectionStart = 0;
             this.metroTextBoxPassword.ShortcutsEnabled = true;
             this.metroTextBoxPassword.Size = new System.Drawing.Size(426, 30);
+            this.metroTextBoxPassword.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTextBoxPassword.TabIndex = 9;
+            this.metroTextBoxPassword.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTextBoxPassword.UseSelectable = true;
             this.metroTextBoxPassword.WaterMark = "Password";
             this.metroTextBoxPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -272,7 +293,9 @@ namespace PasswordManagerV3
             this.metroTextBoxEmail.SelectionStart = 0;
             this.metroTextBoxEmail.ShortcutsEnabled = true;
             this.metroTextBoxEmail.Size = new System.Drawing.Size(426, 30);
+            this.metroTextBoxEmail.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTextBoxEmail.TabIndex = 8;
+            this.metroTextBoxEmail.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTextBoxEmail.UseSelectable = true;
             this.metroTextBoxEmail.WaterMark = "Email";
             this.metroTextBoxEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -309,7 +332,9 @@ namespace PasswordManagerV3
             this.metroTextBoxWebsite.SelectionStart = 0;
             this.metroTextBoxWebsite.ShortcutsEnabled = true;
             this.metroTextBoxWebsite.Size = new System.Drawing.Size(426, 30);
+            this.metroTextBoxWebsite.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTextBoxWebsite.TabIndex = 7;
+            this.metroTextBoxWebsite.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTextBoxWebsite.UseSelectable = true;
             this.metroTextBoxWebsite.WaterMark = "Website";
             this.metroTextBoxWebsite.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -325,8 +350,10 @@ namespace PasswordManagerV3
             this.metroCheckBoxSpecial.Location = new System.Drawing.Point(586, 192);
             this.metroCheckBoxSpecial.Name = "metroCheckBoxSpecial";
             this.metroCheckBoxSpecial.Size = new System.Drawing.Size(231, 25);
+            this.metroCheckBoxSpecial.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroCheckBoxSpecial.TabIndex = 6;
             this.metroCheckBoxSpecial.Text = "Special Char (!@#$%^&*)";
+            this.metroCheckBoxSpecial.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroCheckBoxSpecial.UseSelectable = true;
             // 
             // metroCheckBoxNumbers
@@ -339,8 +366,10 @@ namespace PasswordManagerV3
             this.metroCheckBoxNumbers.Location = new System.Drawing.Point(586, 161);
             this.metroCheckBoxNumbers.Name = "metroCheckBoxNumbers";
             this.metroCheckBoxNumbers.Size = new System.Drawing.Size(105, 25);
+            this.metroCheckBoxNumbers.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroCheckBoxNumbers.TabIndex = 6;
             this.metroCheckBoxNumbers.Text = "Numbers";
+            this.metroCheckBoxNumbers.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroCheckBoxNumbers.UseSelectable = true;
             // 
             // metroCheckBoxUpperCase
@@ -353,8 +382,10 @@ namespace PasswordManagerV3
             this.metroCheckBoxUpperCase.Location = new System.Drawing.Point(586, 130);
             this.metroCheckBoxUpperCase.Name = "metroCheckBoxUpperCase";
             this.metroCheckBoxUpperCase.Size = new System.Drawing.Size(117, 25);
+            this.metroCheckBoxUpperCase.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroCheckBoxUpperCase.TabIndex = 6;
             this.metroCheckBoxUpperCase.Text = "Uppercase";
+            this.metroCheckBoxUpperCase.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroCheckBoxUpperCase.UseSelectable = true;
             // 
             // metroCheckBoxLowerCase
@@ -367,8 +398,10 @@ namespace PasswordManagerV3
             this.metroCheckBoxLowerCase.Location = new System.Drawing.Point(586, 99);
             this.metroCheckBoxLowerCase.Name = "metroCheckBoxLowerCase";
             this.metroCheckBoxLowerCase.Size = new System.Drawing.Size(116, 25);
+            this.metroCheckBoxLowerCase.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroCheckBoxLowerCase.TabIndex = 5;
             this.metroCheckBoxLowerCase.Text = "Lowercase";
+            this.metroCheckBoxLowerCase.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroCheckBoxLowerCase.UseSelectable = true;
             // 
             // metroLabelOptions
@@ -378,8 +411,10 @@ namespace PasswordManagerV3
             this.metroLabelOptions.Location = new System.Drawing.Point(3, 10);
             this.metroLabelOptions.Name = "metroLabelOptions";
             this.metroLabelOptions.Size = new System.Drawing.Size(84, 25);
+            this.metroLabelOptions.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabelOptions.TabIndex = 4;
             this.metroLabelOptions.Text = "Options :";
+            this.metroLabelOptions.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroTabPageManager
             // 
@@ -400,8 +435,10 @@ namespace PasswordManagerV3
             this.metroTabPageManager.Location = new System.Drawing.Point(4, 44);
             this.metroTabPageManager.Name = "metroTabPageManager";
             this.metroTabPageManager.Size = new System.Drawing.Size(976, 383);
+            this.metroTabPageManager.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabPageManager.TabIndex = 1;
             this.metroTabPageManager.Text = "Manager     ";
+            this.metroTabPageManager.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabPageManager.VerticalScrollbar = true;
             this.metroTabPageManager.VerticalScrollbarBarColor = true;
             this.metroTabPageManager.VerticalScrollbarHighlightOnWheel = false;
@@ -414,8 +451,10 @@ namespace PasswordManagerV3
             this.metroButtonDeleteAll.Location = new System.Drawing.Point(926, 10);
             this.metroButtonDeleteAll.Name = "metroButtonDeleteAll";
             this.metroButtonDeleteAll.Size = new System.Drawing.Size(30, 30);
+            this.metroButtonDeleteAll.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroButtonDeleteAll.TabIndex = 9;
             this.metroButtonDeleteAll.Text = "X";
+            this.metroButtonDeleteAll.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroButtonDeleteAll.UseCustomBackColor = true;
             this.metroButtonDeleteAll.UseSelectable = true;
             this.metroButtonDeleteAll.Click += new System.EventHandler(this.metroButtonDeleteAll_Click);
@@ -429,7 +468,9 @@ namespace PasswordManagerV3
             this.metroButtonEditAll.Location = new System.Drawing.Point(890, 10);
             this.metroButtonEditAll.Name = "metroButtonEditAll";
             this.metroButtonEditAll.Size = new System.Drawing.Size(30, 30);
+            this.metroButtonEditAll.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroButtonEditAll.TabIndex = 9;
+            this.metroButtonEditAll.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroButtonEditAll.UseSelectable = true;
             this.metroButtonEditAll.Click += new System.EventHandler(this.metroButtonEditAll_Click);
             // 
@@ -443,7 +484,9 @@ namespace PasswordManagerV3
             this.metroButtonShowAll.Margin = new System.Windows.Forms.Padding(5);
             this.metroButtonShowAll.Name = "metroButtonShowAll";
             this.metroButtonShowAll.Size = new System.Drawing.Size(30, 30);
+            this.metroButtonShowAll.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroButtonShowAll.TabIndex = 9;
+            this.metroButtonShowAll.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroButtonShowAll.UseSelectable = true;
             this.metroButtonShowAll.Click += new System.EventHandler(this.metroButtonShowAll_Click);
             // 
@@ -477,7 +520,9 @@ namespace PasswordManagerV3
             this.metroTextBoxManagerPassword.SelectionStart = 0;
             this.metroTextBoxManagerPassword.ShortcutsEnabled = true;
             this.metroTextBoxManagerPassword.Size = new System.Drawing.Size(323, 30);
+            this.metroTextBoxManagerPassword.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTextBoxManagerPassword.TabIndex = 8;
+            this.metroTextBoxManagerPassword.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTextBoxManagerPassword.UseSelectable = true;
             this.metroTextBoxManagerPassword.Visible = false;
             this.metroTextBoxManagerPassword.WaterMark = "Password";
@@ -515,7 +560,9 @@ namespace PasswordManagerV3
             this.metroTextBoxManagerEmail.SelectionStart = 0;
             this.metroTextBoxManagerEmail.ShortcutsEnabled = true;
             this.metroTextBoxManagerEmail.Size = new System.Drawing.Size(315, 30);
+            this.metroTextBoxManagerEmail.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTextBoxManagerEmail.TabIndex = 8;
+            this.metroTextBoxManagerEmail.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTextBoxManagerEmail.UseSelectable = true;
             this.metroTextBoxManagerEmail.Visible = false;
             this.metroTextBoxManagerEmail.WaterMark = "Email";
@@ -530,8 +577,10 @@ namespace PasswordManagerV3
             this.metroLabelManagerPassword.Location = new System.Drawing.Point(523, 10);
             this.metroLabelManagerPassword.Name = "metroLabelManagerPassword";
             this.metroLabelManagerPassword.Size = new System.Drawing.Size(85, 25);
+            this.metroLabelManagerPassword.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabelManagerPassword.TabIndex = 2;
             this.metroLabelManagerPassword.Text = "Password";
+            this.metroLabelManagerPassword.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroTextBoxManagerWebsite
             // 
@@ -562,7 +611,9 @@ namespace PasswordManagerV3
             this.metroTextBoxManagerWebsite.SelectionStart = 0;
             this.metroTextBoxManagerWebsite.ShortcutsEnabled = true;
             this.metroTextBoxManagerWebsite.Size = new System.Drawing.Size(195, 30);
+            this.metroTextBoxManagerWebsite.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTextBoxManagerWebsite.TabIndex = 8;
+            this.metroTextBoxManagerWebsite.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTextBoxManagerWebsite.UseSelectable = true;
             this.metroTextBoxManagerWebsite.Visible = false;
             this.metroTextBoxManagerWebsite.WaterMark = "Website";
@@ -578,8 +629,10 @@ namespace PasswordManagerV3
             this.metroLabelManagerEmail.Location = new System.Drawing.Point(202, 10);
             this.metroLabelManagerEmail.Name = "metroLabelManagerEmail";
             this.metroLabelManagerEmail.Size = new System.Drawing.Size(55, 25);
+            this.metroLabelManagerEmail.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabelManagerEmail.TabIndex = 2;
             this.metroLabelManagerEmail.Text = "Email";
+            this.metroLabelManagerEmail.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabelManagerWebsite
             // 
@@ -588,8 +641,14 @@ namespace PasswordManagerV3
             this.metroLabelManagerWebsite.Location = new System.Drawing.Point(3, 10);
             this.metroLabelManagerWebsite.Name = "metroLabelManagerWebsite";
             this.metroLabelManagerWebsite.Size = new System.Drawing.Size(83, 25);
+            this.metroLabelManagerWebsite.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroLabelManagerWebsite.TabIndex = 2;
             this.metroLabelManagerWebsite.Text = "Websites";
+            this.metroLabelManagerWebsite.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroStyleExtender1
+            // 
+            this.metroStyleExtender1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // Main
             // 
@@ -647,6 +706,7 @@ namespace PasswordManagerV3
         private MetroFramework.Controls.MetroButton metroButtonDeleteAll;
         private MetroFramework.Controls.MetroButton metroButtonEditAll;
         private MetroFramework.Controls.MetroTextBox metroTextBoxManagerWebsite;
+        private MetroFramework.Components.MetroStyleExtender metroStyleExtender1;
     }
 }
 
