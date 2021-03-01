@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PasswordManagerV3
+namespace PasswordManagerV4
 {
     static class Program
     {

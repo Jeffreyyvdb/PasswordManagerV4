@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PasswordManagerV3
+namespace PasswordManagerV4
 {
     public partial class Main : MetroFramework.Forms.MetroForm
     {
@@ -156,13 +156,13 @@ namespace PasswordManagerV3
 
                 passwordTextBoxxenList[i].UseSystemPasswordChar = false;
                 button.BackColor = accentColor;
-                button.BackgroundImage = global::PasswordManagerV3.Properties.Resources.visibility_white;
+                button.BackgroundImage = global::PasswordManagerV4.Properties.Resources.visibility_white;
             }
             else
             {
                 passwordTextBoxxenList[i].UseSystemPasswordChar = true;
                 button.BackColor = mainColor;
-                button.BackgroundImage = global::PasswordManagerV3.Properties.Resources.invisible_white;
+                button.BackgroundImage = global::PasswordManagerV4.Properties.Resources.invisible_white;
             }
             isShowing = !isShowing;
         }
@@ -179,13 +179,13 @@ namespace PasswordManagerV3
                     textBox.UseSystemPasswordChar = false;
                     showButtonsList[i].BackColor = accentColor;
 
-                    showButtonsList[i].BackgroundImage = global::PasswordManagerV3.Properties.Resources.visibility_white;
+                    showButtonsList[i].BackgroundImage = global::PasswordManagerV4.Properties.Resources.visibility_white;
                     i++;
                 }
                 // Zodat je showen ook gelijk uit kan zetten
                 isShowing = true;
                 metroButtonShowAll.BackColor = accentColor;
-                metroButtonShowAll.BackgroundImage = global::PasswordManagerV3.Properties.Resources.visibility_white;
+                metroButtonShowAll.BackgroundImage = global::PasswordManagerV4.Properties.Resources.visibility_white;
             }
             else
             {
@@ -195,13 +195,13 @@ namespace PasswordManagerV3
                     showButtonsList[i].BackColor = mainColor;
                     showButtonsList[i].UseCustomBackColor = false;
 
-                    showButtonsList[i].BackgroundImage = global::PasswordManagerV3.Properties.Resources.invisible_white;
+                    showButtonsList[i].BackgroundImage = global::PasswordManagerV4.Properties.Resources.invisible_white;
                     i++;
                 }
                 isShowing = false;
                 metroButtonShowAll.BackColor = mainColor;
 
-                metroButtonShowAll.BackgroundImage = global::PasswordManagerV3.Properties.Resources.invisible_white;
+                metroButtonShowAll.BackgroundImage = global::PasswordManagerV4.Properties.Resources.invisible_white;
             }
             allShown = !allShown;
             i = 0;
@@ -585,7 +585,7 @@ namespace PasswordManagerV3
                     buttonShow.Size = buttonSize;
                     buttonShow.UseCustomBackColor = true;
                     buttonShow.BackColor = mainColor;
-                    buttonShow.BackgroundImage = global::PasswordManagerV3.Properties.Resources.invisible_white;
+                    buttonShow.BackgroundImage = global::PasswordManagerV4.Properties.Resources.invisible_white;
                     buttonShow.BackgroundImageLayout = ImageLayout.Stretch;
                     buttonShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
                     metroTabPageManager.Controls.Add(buttonShow);
@@ -601,7 +601,7 @@ namespace PasswordManagerV3
                     buttonEdit.Size = buttonSize;
                     buttonEdit.UseCustomBackColor = true;
                     buttonEdit.BackColor = mainColor;
-                    buttonEdit.BackgroundImage = global::PasswordManagerV3.Properties.Resources.edit_white;
+                    buttonEdit.BackgroundImage = global::PasswordManagerV4.Properties.Resources.edit_white;
                     buttonEdit.BackgroundImageLayout = ImageLayout.Stretch;
                     buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
                     metroTabPageManager.Controls.Add(buttonEdit);

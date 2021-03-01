@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PasswordManagerV3
+namespace PasswordManagerV4
 {
     public class Password
     {

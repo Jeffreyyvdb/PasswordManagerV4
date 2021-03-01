@@ -1,5 +1,5 @@
 ﻿
-namespace PasswordManagerV3
+namespace PasswordManagerV4
 {
     partial class LoginPage
     {

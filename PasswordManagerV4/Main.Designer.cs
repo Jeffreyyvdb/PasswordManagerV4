@@ -1,5 +1,5 @@
 ﻿
-namespace PasswordManagerV3
+namespace PasswordManagerV4
 {
     partial class Main
     {
@@ -31,6 +31,7 @@ namespace PasswordManagerV3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.metroTabControl = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPageGenerator = new MetroFramework.Controls.MetroTabPage();
@@ -82,7 +83,7 @@ namespace PasswordManagerV3
             this.metroTabControl.HotTrack = true;
             this.metroTabControl.Location = new System.Drawing.Point(20, 60);
             this.metroTabControl.Name = "metroTabControl";
-            this.metroTabControl.SelectedIndex = 1;
+            this.metroTabControl.SelectedIndex = 0;
             this.metroTabControl.Size = new System.Drawing.Size(984, 431);
             this.metroTabControl.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl.TabIndex = 1;
@@ -463,7 +464,7 @@ namespace PasswordManagerV3
             // 
             this.metroButtonEditAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroButtonEditAll.BackColor = System.Drawing.Color.Transparent;
-            this.metroButtonEditAll.BackgroundImage = global::PasswordManagerV3.Properties.Resources.edit_white;
+            this.metroButtonEditAll.BackgroundImage = global::PasswordManagerV4.Properties.Resources.edit_white;
             this.metroButtonEditAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.metroButtonEditAll.Location = new System.Drawing.Point(890, 10);
             this.metroButtonEditAll.Name = "metroButtonEditAll";
@@ -478,7 +479,7 @@ namespace PasswordManagerV3
             // 
             this.metroButtonShowAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroButtonShowAll.BackColor = System.Drawing.Color.Transparent;
-            this.metroButtonShowAll.BackgroundImage = global::PasswordManagerV3.Properties.Resources.invisible_white;
+            this.metroButtonShowAll.BackgroundImage = global::PasswordManagerV4.Properties.Resources.invisible_white;
             this.metroButtonShowAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.metroButtonShowAll.Location = new System.Drawing.Point(852, 10);
             this.metroButtonShowAll.Margin = new System.Windows.Forms.Padding(5);
@@ -657,6 +658,7 @@ namespace PasswordManagerV3
             this.ClientSize = new System.Drawing.Size(1024, 511);
             this.Controls.Add(this.metroTabControl);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
