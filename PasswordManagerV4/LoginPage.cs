@@ -9,12 +9,19 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace PasswordManagerV4
 {
     public partial class LoginPage : MetroFramework.Forms.MetroForm
     {
+        System.Timers.Timer t;
+        // Voor het aantal seconden
+        int s;
+        // Om te tellen hoevaak er een fout wachtwoord is opgegeven
+        int count;
+
         const string JSON_PATH_PASSWORD = @"..\..\password.json";
         const string JSON_PATH_ACCOUNT = @"..\..\account.json";
         string jsonString;
@@ -22,6 +29,7 @@ namespace PasswordManagerV4
         public string masterPassword;
         List<Account> accountList = new List<Account>();
 
+        [Obsolete]
         public LoginPage()
         {
             InitializeComponent();
@@ -29,10 +37,33 @@ namespace PasswordManagerV4
             jsonString = File.ReadAllText(JSON_PATH_ACCOUNT);
             accountList = JsonConvert.DeserializeObject<List<Account>>(jsonString);
 
+            t = new System.Timers.Timer();
+            t.Interval = 1000; // = 1 second
+            t.Elapsed += OnTimeEvent;
+
+            count = 5;
+            s = 30;
+        }
+
+        private void OnTimeEvent(object sender, ElapsedEventArgs e)
+        {
+            Invoke(new Action(() =>
+            {
+                s -= 1;
+                if (s <= 0)
+                {
+                    t.Stop();
+                    count = 5;
+                    s = 30;
+                }
+
+                Console.WriteLine($"{s.ToString().PadLeft(2, '0')}");
+            }));
         }
 
         private void metroTileLogin_Click(object sender, EventArgs e)
         {
+
             string hashedPasswordInput = Account.GenerateSHA256Hash(metroTextBoxPassword.Text, accountList[0].salt);
             string savedHashedPassword = accountList[0].hashedPassword;
 
@@ -48,16 +79,27 @@ namespace PasswordManagerV4
                 }
                 else
                 {
-                    MetroFramework.MetroMessageBox.Show(this, "\n\nFout wachtwoord opgegeven", "PASSWORDMANAGERV3 | LOGIN ERROR",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if(count > 0)
+                    {
+                        count--;
+                        MetroFramework.MetroMessageBox.Show(this, $"\n\nFout wachtwoord opgegeven, U heeft nog {count} pogingen over.", "PASSWORDMANAGERV4 | LOGIN ERROR",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else if(count == 0)
+                    {
+                        t.Start();
+                        MetroFramework.MetroMessageBox.Show(this, $"\n\nU heeft tevaak een fout wachtwoord opgegeven. U kunt het opnieuw proberen over {s} Seconden", "PASSWORDMANAGERV4 | LOGIN ERROR",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             else
             {
-                MetroFramework.MetroMessageBox.Show(this, "\n\nAccount niet gevonden", "PASSWORDMANAGERV3 | LOGIN ERROR",
+                MetroFramework.MetroMessageBox.Show(this, "\n\nAccount niet gevonden", "PASSWORDMANAGERV4 | LOGIN ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+    
 
         private void metroTileRegister_Click(object sender, EventArgs e)
         {
@@ -69,7 +111,6 @@ namespace PasswordManagerV4
                 bool validPassword = IsValidPassword(newPassword);
                 if (validPassword)
                 {
-                    Console.WriteLine("JA");
 
                     //Add new account
                     Account newAccount = new Account(newUsername, newPassword);

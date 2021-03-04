@@ -18,7 +18,6 @@ namespace PasswordManagerV4
         const string JSON_PATH_ACCOUNT = @"..\..\account.json";
 
         string jsonPassword;
-        string jsonAccount;
 
         List<Password> passwordList = new List<Password>();
         List<Account> accountList = new List<Account>();
@@ -42,7 +41,8 @@ namespace PasswordManagerV4
         MetroFramework.MetroColorStyle style = MetroFramework.MetroColorStyle.Orange;
         Color accentColor = MetroFramework.MetroColors.Orange;
         Color mainColor = MetroFramework.MetroColors.Black;
-    
+
+        [Obsolete]
         public Main()
         {
             InitializeComponent();

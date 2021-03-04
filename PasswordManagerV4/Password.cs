@@ -46,11 +46,10 @@ namespace PasswordManagerV4
 
             for (int i = 0; i < length; i++)
             {
-
-                char characther = charToUse[r.Next(charToUse.Length)];
-                password += characther;
-            }
-            return password;
+                    char characther = charToUse[r.Next(charToUse.Length)];
+                    password += characther;
+                }
+                return password;
             }
             else
             {
